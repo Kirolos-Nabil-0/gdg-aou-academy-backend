@@ -1,1 +1,0 @@
-# gdg-aou-academy-backend
