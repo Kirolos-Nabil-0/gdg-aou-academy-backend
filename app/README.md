@@ -23,8 +23,14 @@ app/
 ### **Controllers (Http/Controllers/Api/)**
 RESTful API controllers handling HTTP requests:
 - `AuthController` - Authentication & user management
+- `UserController` - User CRUD & role assignment (Admin)
+- `CollegeController` - College CRUD operations
+- `TrackController` - Track CRUD operations
 - `CourseController` - Course CRUD operations
 - `EnrollmentController` - Enrollment management
+- `SessionController` - Session scheduling
+- `AttendanceController` - Attendance tracking
+- `AssignmentController` - Assignment CRUD operations
 - `GradeController` - Grading system
 - `CertificateController` - Certificate generation
 - `DashboardController` - Analytics & statistics
@@ -64,9 +70,14 @@ Eloquent ORM models representing database tables:
 - Define accessors/mutators
 
 **Key Models:**
-- `User` - User accounts
+- `User` - User accounts with roles
+- `College` - College reference data
+- `Track` - Track reference data
 - `Course` - Course catalog
 - `Enrollment` - Course enrollments
+- `Session` - Scheduled sessions
+- `AttendanceRecord` - Attendance tracking
+- `Assignment` - Course assignments
 - `Grade` - Student grades
 - `Certificate` - Generated certificates
 

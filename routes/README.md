@@ -20,12 +20,14 @@ All API routes are prefixed with `/api` and organized by feature.
 ```
 /api
 ├── /auth                 # Authentication
-├── /colleges             # Colleges (public)
-├── /tracks               # Tracks (public)
+├── /users                # User management (Admin)
+├── /colleges             # Colleges (Admin CRUD)
+├── /tracks               # Tracks (Admin CRUD)
 ├── /courses              # Courses
 ├── /enrollments          # Enrollments
 ├── /sessions             # Sessions
 ├── /attendance           # Attendance
+├── /assignments          # Assignments
 ├── /grades               # Grades
 ├── /certificates         # Certificates
 ├── /dashboard            # Dashboards

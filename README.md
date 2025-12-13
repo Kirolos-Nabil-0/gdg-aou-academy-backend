@@ -27,10 +27,13 @@ The **GDG Learning Platform** is a modern, scalable learning management system d
 ### **Key Highlights:**
 - 🔐 **Secure Authentication** - Token-based auth with Laravel Sanctum
 - 👥 **Role-Based Access Control** - 4 roles with 45+ granular permissions
-- 📊 **Comprehensive Dashboards** - Admin, Instructor, and Learner views
+- 🎯 **User Management System** - Full CRUD with role assignment
+- � **Assignment System** - Create, manage, and grade assignments
+- 🏛️ **College & Track Management** - Admin-controlled reference data
+- �📊 **Comprehensive Dashboards** - Admin, Instructor, and Learner views
 - 📜 **PDF Certificates** - Auto-generated with eligibility criteria
 - 🌐 **Multilanguage Support** - English & Arabic
-- 📱 **RESTful API** - 50+ well-documented endpoints
+- 📱 **RESTful API** - 70+ well-documented endpoints
 
 ---
 
@@ -38,12 +41,15 @@ The **GDG Learning Platform** is a modern, scalable learning management system d
 
 ### **For Administrators:**
 - Platform-wide statistics and analytics
-- User management (CRUD)
+- **User management (CRUD with role assignment)**
+- **College & Track management (CRUD)**
 - Course approval and management
 - System configuration
+- Self-deletion prevention
 
 ### **For Instructors/HR:**
 - Course creation and management
+- **Assignment creation and management**
 - Student enrollment management
 - Attendance tracking
 - Grade submission and gradebook
@@ -51,20 +57,24 @@ The **GDG Learning Platform** is a modern, scalable learning management system d
 
 ### **For Learners:**
 - Course browsing and enrollment
+- **Assignment viewing with grades**
 - Attendance tracking
-- Grade viewing
+- Grade viewing with final grade calculation
 - Certificate generation
 - Personal dashboard
 
 ### **Core Modules:**
 1. **Authentication & Authorization** - Sanctum + Spatie Permissions
-2. **Course Management** - Full CRUD with status tracking
-3. **Enrollment System** - Self-enrollment + waitlist support
-4. **Session & Attendance** - Scheduling and tracking
-5. **Grading System** - Weighted grade calculation
-6. **Certificates** - PDF generation with eligibility checks
-7. **Dashboards** - Role-based analytics
-8. **Notifications** - In-app notification system
+2. **User Management** - Full CRUD with role assignment (Admin only)
+3. **College & Track Management** - CRUD operations (Admin only)
+4. **Course Management** - Full CRUD with status tracking
+5. **Enrollment System** - Self-enrollment + waitlist support
+6. **Session & Attendance** - Scheduling and tracking
+7. **Assignment System** - Create, update, delete assignments
+8. **Grading System** - Assignment-based weighted grade calculation
+9. **Certificates** - PDF generation with eligibility checks
+10. **Dashboards** - Role-based analytics
+11. **Notifications** - In-app notification system
 
 ---
 
@@ -234,16 +244,20 @@ Authorization: Bearer {token}
 | Module | Endpoints | Description |
 |--------|-----------|-------------|
 | **Auth** | 7 | Registration, login, password reset |
+| **Users** | 6 | User CRUD, role assignment (Admin) |
+| **Colleges** | 5 | College CRUD (Admin) |
+| **Tracks** | 5 | Track CRUD (Admin) |
 | **Courses** | 6 | CRUD + published courses |
 | **Enrollments** | 4 | Enroll, unenroll, view enrollments |
 | **Sessions** | 3 | Schedule, view sessions |
 | **Attendance** | 4 | Mark, view attendance |
+| **Assignments** | 5 | CRUD operations (Admin/Instructor) |
 | **Grades** | 5 | Submit, view grades, gradebook |
 | **Certificates** | 4 | Generate, download, check eligibility |
 | **Dashboards** | 4 | Admin, Instructor, Learner dashboards |
 | **Notifications** | 5 | View, mark read, delete |
 
-**Total:** 50+ endpoints
+**Total:** 70+ endpoints
 
 For detailed API documentation, see [API_DOCUMENTATION.md](docs/API_DOCUMENTATION.md)
 
